@@ -6,6 +6,7 @@
  * @LastEditTime: 2021-01-30 23:16:27
  */
 import FlowChart from "./FlowChart.vue";
+export * from "./types";
 
 (FlowChart as any).install = (Vue: any) => {
   Vue.component(FlowChart.name, FlowChart);

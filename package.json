@@ -1,9 +1,9 @@
 {
-  "name": "grid-flow-chart",
+  "name": "grid-flow-chart-vue",
   "version": "0.1.1",
   "private": false,
-  "main": "dist/grid-flow-chart.umd.min.js",
-  "module": "dist/grid-flow-chart.umd.min.js",
+  "main": "dist/grid-flow-chart-vue.umd.min.js",
+  "module": "dist/grid-flow-chart-vueex.umd.min.js",
   "keywords": [
     "flowChart",
     "super flow",
@@ -22,7 +22,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
-    "build-lib": "vue-cli-service build --target lib --name grid-flow-chart src/components/index.ts",
+    "build-lib": "vue-cli-service build --target lib --name grid-flow-chart-vue src/components/index.ts",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
