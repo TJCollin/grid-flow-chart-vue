@@ -6,7 +6,7 @@ Grid Flow Chart is a plugin which is aimed to build a highly customisable, decla
 
 ## docs
 
-[Docs](https://tjcollin.github.io/grid-flow-chart-react/docs/en/)
+[Chinese & English Docs](https://tjcollin.github.io/grid-flow-chart-react/docs/en/)
 
 ## example
 
