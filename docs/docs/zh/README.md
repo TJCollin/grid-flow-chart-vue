@@ -3,7 +3,7 @@ home: true
 heroText: Grid Flow Chart
 actions:
   - text: 快速上手 →
-    link: /zh/
+    link: /zh/guide/
     type: primary
 features:
   - title: 自动连线

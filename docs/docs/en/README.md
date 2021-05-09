@@ -1,8 +1,10 @@
 ---
 home: true
 heroText: Grid Flow Chart
-actionText: Getting Started →
-actionLink: /en/guide/
+actions:
+  - text: Getting Start →
+    link: /en/guide/
+    type: primary
 features:
   - title: Automatically drawing line
     details: Given the start and end points of the connecting line, automatically determine the connecting line trajectory.

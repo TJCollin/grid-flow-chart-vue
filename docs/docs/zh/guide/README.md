@@ -6,78 +6,18 @@ Grid Flow Chart 是一款用于画流程图的插件。核心是通过画网格�
 
 ## 示例
 
-[地址](https://better-scroll.github.io/examples/)
+[Demo](https://tjcollin.github.io/grid-flow-chart-react/example/build/)
 
-<img data-zoomable :src="$withBase('/assets/images/qrcode.png')" alt="示例">
+[React demo code](https://github.com/TJCollin/grid-flow-chart-react/tree/main/example)
 
-## 起步
+[Vue demo code](https://github.com/TJCollin/grid-flow-chart-vue/blob/main/src/App.vue)
 
-BetterScroll 最常见的应用场景是列表滚动，我们来看一下它的 html 结构。
+## 画图步骤
 
-```html
-<div class="wrapper">
-  <ul class="content">
-    <li>...</li>
-    <li>...</li>
-    ...
-  </ul>
-  <!-- 这里可以放一些其它的 DOM，但不会影响滚动 -->
-</div>
-```
+- 确定流程图所在区块
 
-上面的代码中 BetterScroll 是作用在外层 **wrapper** 容器上的，滚动的部分是 **content** 元素。这里要注意的是，BetterScroll 默认处理容器（wrapper）的第一个子元素（content）的滚动，其它的元素都会被忽略。
+- 在上述区块中划分网格
 
-最简单的初始化代码如下：
+- 确定流程图每个节点所在网格位置
 
-```js
-import BScroll from "@better-scroll/core";
-let wrapper = document.querySelector(".wrapper");
-let scroll = new BScroll(wrapper);
-```
-
-BetterScroll 提供了一个类，实例化的第一个参数是一个原生的 DOM 对象。当然，如果传递的是一个字符串，BetterScroll 内部会尝试调用 querySelector 去获取这个 DOM 对象。
-
-:::warning 注意
-BetterScroll 2.X 里面，我们将 1.X 耦合的 feature 拆分至插件，以达到按需加载、减少包体积的目的。因此，`@better-scroll/core` 只提供了最核心的滚动能力。如果想要实现**上拉刷新**、**下拉加载**的功能，你需要使用对应的[插件](/zh-CN/plugins)。
-:::
-
-:::tip 提示
-版本 2.0.4 的 BetterScroll 可以通过 [specifiedIndexAsContent](./base-scroll-options.html#specifiedindexascontent-2-0-4) 来指定 wrapper 的某个子元素作为 content。
-:::
-
-## 滚动原理
-
-很多人已经用过 BetterScroll，我收到反馈最多的问题是：
-
-> BetterScroll 初始化了， 但是没法滚动。
-
-不能滚动是现象，我们得搞清楚这其中的根本原因。在这之前，我们先来看一下浏览器的滚动原理：
-浏览器的滚动条大家都会遇到，当页面内容的高度超过视口高度的时候，会出现纵向滚动条；当页面内容的宽度超过视口宽度的时候，会出现横向滚动条。也就是当我们的视口展示不下内容的时候，会通过滚动条的方式让用户滚动屏幕看到剩余的内容。
-
-BetterScroll 也是一样的原理，我们可以用一张图更直观的感受一下：
-
-<img data-zoomable :src="$withBase('/assets/images/schematic.png')" alt="原理图">
-
-绿色部分为 wrapper，也就是父容器，它会有**固定的高度**。黄色部分为 content，它是父容器的**第一个子元素**，它的高度会随着内容的大小而撑高。那么，当 content 的高度不超过父容器的高度，是不能滚动的，而它一旦超过了父容器的高度，我们就可以滚动内容区了，这就是 BetterScroll 的滚动原理。
-
-## BetterScroll 在 MVVM 框架的应用
-
-我之前写过一篇[当 BetterScroll 遇见 Vue](https://zhuanlan.zhihu.com/p/27407024)，也希望大家投稿，分享一下 BetterScroll 在其它框架下的使用心得。
-
-一款超赞的基于 Vue 实现的组件库 [cube-ui](https://github.com/didi/cube-ui/)。
-
-## BetterScroll 在实战项目中的运用
-
-如果你想学习 BetterScroll 在实战项目中的运用，也可以去学习我的 2 门实战课程。
-
-[Vue.js 高仿外卖饿了么实战课程](https://coding.imooc.com/class/74.html)
-
-[项目演示地址](http://ustbhuangyi.com/sell/)
-
-![二维码](https://qr.api.cli.im/qr?data=http%253A%252F%252Fustbhuangyi.com%252Fsell%252F%2523%252Fgoods&level=H&transparent=false&bgcolor=%23ffffff&forecolor=%23000000&blockpixel=12&marginblock=1&logourl=&size=280&kid=cliim&key=686203a49c4613080b5b3004323ff977)
-
-[Vue.js 音乐 App 高级实战课程](http://coding.imooc.com/class/107.html)
-
-[项目演示地址](http://ustbhuangyi.com/music/)
-
-![二维码](https://qr.api.cli.im/qr?data=http%253A%252F%252Fustbhuangyi.com%252Fmusic%252F&level=H&transparent=false&bgcolor=%23ffffff&forecolor=%23000000&blockpixel=12&marginblock=1&logourl=&size=280&kid=cliim&key=731bbcc2b490454d2cc604f98539952c)
+- 确定需要连线的起始点
